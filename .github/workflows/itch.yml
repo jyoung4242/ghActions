@@ -15,11 +15,8 @@ jobs:
   test:
     uses: ./.github/workflows/vittest.yml
 
-  deploy_release:
-    name: Publish npm package
-    needs: [lint, test]
-
   deploy:
+    needs: [lint, test]
     name: Upload to Itch
     runs-on: ubuntu-latest
     steps:
