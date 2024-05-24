@@ -1,7 +1,7 @@
 import "./style.css";
 import { UI } from "@peasy-lib/peasy-ui";
-import { Engine, DisplayMode, TileMap, ImageSource, SpriteSheet, Camera, Vector, Loader, Actor, Graphic } from "excalibur";
-//@ts-ignore
+import { Engine, DisplayMode, ImageSource, Vector, Loader, Actor } from "excalibur";
+//@ts-expect-error invalid import
 import rick from "./assets/rick.gif";
 const model = {};
 
