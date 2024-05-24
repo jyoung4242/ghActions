@@ -10,6 +10,15 @@ env:
   ITCH_USERNAME: Mookie4242
   ITCH_GAME_ID: test-gh-actions-project
 jobs:
+  lint:
+    uses: ./.github/workflows/lint.yml
+  test:
+    uses: ./.github/workflows/vittest.yml
+
+  deploy_release:
+    name: Publish npm package
+    needs: [lint, test]
+
   deploy:
     name: Upload to Itch
     runs-on: ubuntu-latest
