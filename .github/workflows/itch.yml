@@ -14,9 +14,11 @@ jobs:
     uses: ./.github/workflows/lint.yml
   test:
     uses: ./.github/workflows/vittest.yml
+  format:
+    uses: ./.github/workflows/format.yml
 
   deploy:
-    needs: [lint, test]
+    needs: [lint, test, format]
     name: Upload to Itch
     runs-on: ubuntu-latest
     steps:
