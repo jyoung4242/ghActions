@@ -1,10 +1,12 @@
-name: Prettier Action
+name: Prettier
 
 on:
   push:
     branches:
       - main
   pull_request:
+    branches:
+      - main
   workflow_call:
 
 jobs:
@@ -12,4 +14,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: format
-      - uses: creyD/prettier_action@v4.3
+        uses: creyD/prettier_action@v4.3
