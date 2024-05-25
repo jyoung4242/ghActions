@@ -15,8 +15,11 @@ jobs:
   test:
     uses: ./.github/workflows/vittest.yml
 
+  prettier:
+    uses: ./.github/workflows/prettier.yml
+
   deploy:
-    needs: [lint, test]
+    needs: [lint, test, prettier]
     name: Upload to Itch
     runs-on: ubuntu-latest
     steps:

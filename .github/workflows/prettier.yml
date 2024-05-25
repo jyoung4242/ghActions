@@ -1,0 +1,10 @@
+name: Prettier Action
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_call:
+
+uses: creyD/prettier_action@v4.3
