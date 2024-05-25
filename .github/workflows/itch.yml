@@ -42,5 +42,5 @@ jobs:
           gameData: ./dist
           itchUsername: ${{env.ITCH_USERNAME}}
           itchGameId: ${{ env.ITCH_GAME_ID }}
-          buildChannel: webgl
+          buildChannel: itch_build
           buildNumber: ${{ steps.version.outputs.value }}
